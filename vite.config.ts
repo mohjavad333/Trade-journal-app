@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },
+  base: mode === "production" ? "/Trade-journal-app/" : "/",
   build: {
     outDir: "dist/spa",
   },
